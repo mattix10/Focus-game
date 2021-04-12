@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto 30px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgba(202, 66, 243, 0.925),
+    rgb(43, 73, 243)
+  );
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.info__message {
+  padding: 0 50px 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.info--color {
+  color: greenyellow;
+}
+
+.info--reset {
+  color: red;
+}
+
+.info--start {
+  color: rgb(147, 56, 201);
+}
+
+.info--end {
+  font-size: 20px;
+  color: red;
+}
+
+.header__tile {
+  width: 20%;
+  margin: auto;
+  padding: 10px 15px;
+  text-align: center;
+  color: rgba(241, 223, 240, 0.89);
+}
+
+.header__tile:nth-child(2),
+.header__tile:first-child {
+  width: 12.5%;
+}
+
+.header--time {
+  width: 25%;
+  text-align: center;
+}
+
+.timer,
+.lives,
+.scores {
+  font-size: 20px;
+  color: rgb(243, 243, 243);
+}
+
+.header--title {
+  width: 40%;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.square__container {
+  margin: auto;
+  min-width: 210px;
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: rgb(207, 205, 204);
+  cursor: pointer;
+}
+
+.active--square {
+  background-color: greenyellow;
+}
+
+.button__container {
+  margin: 20px auto;
+  width: 50%;
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 200px;
+  padding: 10px 70px;
+  margin: 5px 0;
+  border-radius: 35px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn--reset {
+  background-image: linear-gradient(
+    to right,
+    rgb(248, 20, 20),
+    rgb(247, 58, 58)
+  );
+}
+
+.btn--disabled {
+  background-color: grey;
+  cursor: inherit;
+}
+
+.btn--start {
+  background-color: rgb(147, 56, 201);
+}
+
+@media only screen and (max-width: 768px) {
+  .square__container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .square__container {
+    width: 270px;
+    margin: auto;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .header__tile {
+    font-size: 14px;
+  }
+
+  .header--title {
+    font-size: 24px;
+  }
+
+  .header--timer,
+  .lives,
+  .scores {
+    width: 40px;
+  }
+
+  .life,
+  .header--scores {
+    width: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
