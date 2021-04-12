@@ -426,7 +426,7 @@ var drawGreenSquare = function drawGreenSquare() {
 };
 
 var removeActiveClass = function removeActiveClass(el) {
-  if (!model.state.clicked) decreaseLives();
+  if (!model.state.clicked && !isEndOfGame()) decreaseLives();
 
   _gameView.default.removeActiveClass(el);
 };
@@ -442,6 +442,7 @@ var checkSquare = function checkSquare(el) {
 
     _headerView.default.updateScores(model.state.scores);
   } else {
+    if (isEndOfGame()) return;
     decreaseLives();
   }
 };
@@ -459,6 +460,7 @@ var isEndOfGame = function isEndOfGame() {
       time = _model$state.time;
 
   if (lives == 0 || play == false || time == 0) {
+    console.log(model.state.play);
     if (_gameView.default.checkDisabled()) _gameView.default.showEndMessage();
     return true;
   } else return false;
@@ -475,8 +477,8 @@ var startGame = function startGame() {
 };
 
 var init = function init() {
-  model.resetGame();
   clearInterval(drawIntervalId);
+  model.resetGame();
 
   _gameView.default.addHandlerStartClick(startGame);
 
