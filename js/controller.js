@@ -2,7 +2,6 @@
 import * as model from "./model.js";
 import gameView from "./views/gameView";
 import headerView from "./views/headerView.js";
-import "regenerator-runtime/runtime";
 import { drawNumber } from "./helpers";
 import { HOW_MANY_SQUARES, DELAY, DRAW_INTERVAL } from "./config.js";
 
