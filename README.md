@@ -13,4 +13,4 @@ I created this game to have fun. I created this project using MVC pattern and pa
 * Parcel
 
 ## Link
-See more at:
+See more at: https://focus-game.netlify.app/
