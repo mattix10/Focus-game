@@ -36,13 +36,16 @@ class gameView {
 
   addActiveClass(number) {
     if (!number) return;
+
     this._squareContainer.children[number].classList.add(this._activeClassName);
   }
 
   removeActiveClass = function (param) {
     if (!param) return;
+
     if (typeof param === "object")
       param.classList.remove(this._activeClassName);
+
     if (typeof param === "number")
       this._squareContainer.children[param].classList.remove(
         this._activeClassName

@@ -37,6 +37,7 @@ const drawGreenSquare = function () {
 
 const removeActiveClass = function (el) {
   if (!model.state.clicked && !isEndOfGame()) decreaseLives();
+
   gameView.removeActiveClass(el);
 };
 
@@ -51,6 +52,7 @@ const checkSquare = function (el) {
     headerView.updateScores(model.state.scores);
   } else {
     if (isEndOfGame()) return;
+
     decreaseLives();
   }
 };
@@ -62,9 +64,10 @@ const decreaseLives = function () {
 
 const isEndOfGame = function () {
   const { play, lives, time } = model.state;
+
   if (lives == 0 || play == false || time == 0) {
-    console.log(model.state.play);
     if (gameView.checkDisabled()) gameView.showEndMessage();
+
     return true;
   } else return false;
 };
