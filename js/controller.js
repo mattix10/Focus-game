@@ -26,7 +26,7 @@ const startTimer = function () {
 const drawGreenSquare = function () {
   if (isEndOfGame()) return;
 
-  model.state.clicked = false;
+  model.setClickedFalse();
 
   const greenNumber = drawNumber(HOW_MANY_SQUARES);
 
@@ -44,7 +44,7 @@ const removeActiveClass = function (el) {
 const checkSquare = function (el) {
   if (isEndOfGame()) return;
 
-  model.state.clicked = true;
+  model.setClickedTrue();
 
   if (el.target.classList.contains("active--square")) {
     gameView.removeActiveClass(el.target);

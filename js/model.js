@@ -32,3 +32,11 @@ export const reduceLives = function () {
 export const reduceTime = function () {
   this.state.time--;
 };
+
+export const setClickedFalse = function () {
+  this.state.clicked = false;
+}
+
+export const setClickedTrue = function () {
+  this.state.clicked = true;
+}
